@@ -8,7 +8,7 @@ Bonus: At the end, print how many errors were found
 #Taif AlQarni
 
 #have two file read from server_log and create/write to errors.txt file
-with open('server_log.txt', 'r') as s, open('errors.txt', 'w') as e:
+with open('server_log.txt', 'r') as s, open('errors_only.txt', 'w') as e:
     Errorlines = 0 #defining the counter for lines found
     for line in s:
         #for-loop here to read every line in the file and search for line start with word'ERROR'
@@ -18,6 +18,7 @@ with open('server_log.txt', 'r') as s, open('errors.txt', 'w') as e:
 
 
 print('Errors Found: {}'.format(Errorlines))
+
 
 
 
